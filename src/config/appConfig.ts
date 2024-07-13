@@ -12,7 +12,7 @@ interface IAppConfig {
 
 export const appConfig: IAppConfig = {
   port: process.env.PORT || '3000',
-  host: process.env.HOST || 'localhost',
+  host: process.env.HOST || '0.0.0.0',
   auth: {
     saltRounds: '11',
     accessTokenSecret: process.env.AUTH_ACCESS_TOKEN_SECRET || 'ENTER_ACCESS_TOKEN_SALT_HERE',
