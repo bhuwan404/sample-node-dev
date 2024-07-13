@@ -13,9 +13,11 @@ RUN yarn install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-RUN yarn prisma generate
-
+RUN npm run db:generate
+RUN npm run lint
+RUN npm run test
 RUN npm run build
+
 
 # Expose the port the app runs on
 EXPOSE 3000
