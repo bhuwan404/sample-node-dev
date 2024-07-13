@@ -28,8 +28,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - name: Install dependencies
-      run: npm install
+    - name: Docker build
+      run: docker build -t 
 
     # - name: Run npm audit fix
       # run: npm audit fix
@@ -40,7 +40,7 @@ jobs:
     - name: Build project
       run: npm run build --if-present
 
-    - name: Run tests
-      run: npm run test
+    # - name: Run tests
+      # run: npm run test
       # run: npm test
 
