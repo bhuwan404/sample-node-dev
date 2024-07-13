@@ -29,4 +29,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: bhuwan405/sample-node-dev:latest
+          tags: bhuwan405/sample-node-dev:${{ github.run_number }}
